@@ -1,0 +1,61 @@
+@startuml diagram_10_2
+
+class Ex_10_2 {
+    - foodList<String> : List
+    - chefs : Handler
+
+    + main(String[]) : void
+}
+
+interface Handler {
+    + handle(String) : void
+    + setNext(Handler) : Handler
+}
+
+abstract class Chef {
+    - next : Handler
+
+    + setNext(Handler) : Handler
+    + handle(String) : void
+    + cook(String) : void
+    + randomTime() : int
+}
+
+class DessertChef {
+    + setNext(Handler) : Handler
+    + handle(String) : void
+}
+
+class PastaChef {
+    + setNext(Handler) : Handler
+    + handle(String) : void
+}
+
+class BurgerChef{
+    + setNext(Handler) : Handler
+    + handle(String) : void
+}
+
+class PizzaChef {
+    + setNext(Handler) : Handler
+    + handle(String) : void
+}
+
+class SushiChef {
+    + setNext(Handler) : Handler
+    + handle(String) : void
+}
+
+
+Ex_10_2 ..> Chef : creates
+
+
+Chef <|-- DessertChef : extends
+Chef <|-- PastaChef : extends
+Chef <|-- BurgerChef : extends
+Chef <|-- PizzaChef : extends
+Chef <|-- SushiChef : extends
+
+Chef ..|> Handler : implements
+
+@enduml

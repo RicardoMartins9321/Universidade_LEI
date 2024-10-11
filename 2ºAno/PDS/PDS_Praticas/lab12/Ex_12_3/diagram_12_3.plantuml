@@ -1,0 +1,80 @@
+@startuml diagram_12_3
+
+class Biblioteca {
+    - List<Livro> livros : List<Livro>
+    - Scanner scanner : Scanner
+
+    + main(String[]) : void
+}
+
+class Livro {
+    - String titulo
+    - String ISBN
+    - int ano
+    - String autor
+    - EstadoLivro estado
+
+    + Livro(String, int, int, String, EstadoLivro)
+    + regista() : void
+    + requisita() : void
+    + devolve() : void
+    + reserva() : void
+    + cancelaReserva() : void
+}
+
+interface EstadoLivro {
+    + regista(Livro) : void
+    + requisita(Livro) : void
+    + devolve(Livro) : void
+    + reserva(Livro) : void
+    + cancelaReserva(Livro) : void
+    + toString() : String
+}
+
+class Inventario {
+    + regista(Livro) : void
+    + requisita(Livro) : void
+    + devolve(Livro) : void
+    + reserva(Livro) : void
+    + cancelaReserva(Livro) : void
+    + toString() : String
+}
+
+class Disponivel {
+    + regista(Livro) : void
+    + requisita(Livro) : void
+    + devolve(Livro) : void
+    + reserva(Livro) : void
+    + cancelaReserva(Livro) : void
+    + toString() : String
+}
+
+class Emprestado {
+    + regista(Livro) : void
+    + requisita(Livro) : void
+    + devolve(Livro) : void
+    + reserva(Livro) : void
+    + cancelaReserva(Livro) : void
+    + toString() : String
+}
+
+class Reservado {
+    + regista(Livro) : void
+    + requisita(Livro) : void
+    + devolve(Livro) : void
+    + reserva(Livro) : void
+    + cancelaReserva(Livro) : void
+    + toString() : String
+}
+
+Biblioteca ..> Livro : creates
+Biblioteca ..> Inventario : creates
+
+Livro "1" o-- "1" EstadoLivro : has a
+
+EstadoLivro <|.. Inventario : implements
+EstadoLivro <|.. Disponivel : implements
+EstadoLivro <|.. Emprestado : implements
+EstadoLivro <|.. Reservado : implements
+
+@enduml

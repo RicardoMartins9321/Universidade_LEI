@@ -1,0 +1,65 @@
+@startuml diagram_11_1
+
+class Ex_11_1 {
+    + main(String[]) : void
+}
+
+class Produto {
+    - List<Observer> observadores
+    - static int contadorId
+    - int id
+    - String descricao
+    - double precoBase
+    - double precoAtual
+    - Estado estadoAtual
+    - long inicioLeilao
+    - long duracaoLeilao
+
+    + Produto(String, double)
+    + adicionarObservador(Observer) : void
+    + definirEstado(Estado) : void
+    + definirEstado(Estado, long) : void
+    + obterEstado() : Estado
+    + definirPreco(double) : void
+    + obterPreco() : double
+    + verificarLeilao() : void
+    + toString() : String
+    - notificarObservadores(boolean) : void
+}
+
+class Cliente {
+    + Cliente(String)
+    + ofertar(Produto, double) : void
+    + atualizar(Produto, boolean) : void
+}
+
+class Gestor {
+    + Gestor(String)
+    + registrarProduto(Produto) : void
+    + atualizar(Produto, boolean) : void
+}
+
+abstract class Observer {
+    protected String nome
+    protected ArrayList<Produto> produtosLeilao
+
+    + atualizar(Produto, boolean) : void
+}
+
+enum Estado {
+    STOCK
+    LEILAO
+    VENDAS
+}
+
+Ex_11_1 ..> Produto : creates
+Ex_11_1 ..> Cliente : creates
+Ex_11_1 ..> Gestor : creates
+
+Produto "1" o-- "1" Estado : has
+Produto "1" --> "*" Observer : notifies
+
+Observer <|-- Cliente : extends
+Observer <|-- Gestor : extends
+
+@enduml

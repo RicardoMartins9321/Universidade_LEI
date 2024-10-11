@@ -1,0 +1,45 @@
+@startuml diagram_11_3
+
+class Ex_11_3 {
+    + main(String[]) : void
+}
+
+interface Mediator {
+    + sendMessage(String, Colleague) : void
+    + addColleague(Colleague) : void
+}
+
+abstract class Colleague {
+    # protected Mediator
+
+    - Colleague(Mediator)
+
+    + send(String) : void
+    + receive(String) : void
+}
+
+class ChatMediator {
+    - List<Colleague> colleagues
+
+    + ChatMediator() : void
+    + sendMessage(String, Colleague) : void
+    + addColleague(Colleague) : void
+}
+
+class User {
+    - String name
+
+    + User(Mediator, String) : void
+    + send(String) : void
+    + receive(String) : void
+}
+
+Mediator <|.. ChatMediator : implements
+Colleague <|-- User : extends
+
+ChatMediator --> Colleague : mediates
+
+Ex_11_3 --> ChatMediator : creates
+Ex_11_3 --> User : creates
+
+@enduml

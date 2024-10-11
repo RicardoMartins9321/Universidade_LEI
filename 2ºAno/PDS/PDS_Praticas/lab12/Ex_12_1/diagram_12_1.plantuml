@@ -1,0 +1,66 @@
+@startuml diagram_12_1
+
+class Ex_12_1 {
+    - List<Telemovel> telemoveis : List<Telemovel>
+    - TelemovelSorter sorter : TelemovelSorter
+
+    + main(String[]) : void
+}
+
+class Telemovel {
+    - String processador
+    - double preco
+    - int memoria
+    - int camera
+
+    + Telemovel(String, double, int, int)
+    + getProcessador() : String
+    + setProcessador(String) : void
+    + getPreco() : double
+    + setPreco(double) : void
+    + getMemoria() : int
+    + setMemoria(int) : void
+    + getCamera() : int
+    + setCamera(int) : void
+    + toString() : String
+}
+
+interface SortStrategy {
+    + sort(List<Telemovel>) : void
+}
+
+class BubbleSort {
+    + sort(List<Telemovel>) : void
+}
+
+class QuickSort {
+    + sort(List<Telemovel>) : void
+
+    - quickSort(List<Telemovel>, int, int) : void
+    - partition(List<Telemovel>, int, int) : int
+}
+
+class MergeSort {
+    + sort(List<Telemovel>) : void
+
+    - MergeSort(List<Telemovel>, int, int) : void
+    - Merge(List<Telemovel>, int, int, int) : void
+}
+
+class TelemovelSorter {
+    - SortStrategy strategy
+
+    + setSortStrategy(SortStrategy) : void
+    + sortTelemoveis(List<Telemovel>) : void
+}
+
+Ex_12_1 ..> Telemovel : creates
+Ex_12_1 ..> TelemovelSorter : creates
+
+TelemovelSorter ..> SortStrategy : uses
+
+SortStrategy <|.. BubbleSort : implements
+SortStrategy <|.. QuickSort : implements
+SortStrategy <|.. MergeSort : implements
+
+@enduml

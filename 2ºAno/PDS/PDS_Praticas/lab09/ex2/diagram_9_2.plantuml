@@ -1,0 +1,111 @@
+@startuml diagram_9_2
+
+class SharkCompany {
+    + main(String[] args)
+}
+
+enum User {
+    OWNER, COMPANY
+}
+
+interface BankAccount {
+    + deposit(double) : void
+    + withdraw(double) : boolean
+    + balance() : double
+}
+
+class BankAccountImpl {
+    - BankAccountImpl(String, double)
+
+    - bank : String
+    - balance : double
+
+    + getBank() : String
+    + deposit(double amount)
+    + withdraw(double amount) : boolean
+    + balance() : double
+}
+
+class ProxyBankAccount {
+    - ProxyBankAccount(String, double)
+
+    - realBank : BankAccountImpl
+
+    + checkAccess() : boolean
+    + deposit(double) : void
+    + withdraw(double) : boolean
+    + balance() : double
+}
+
+class Person {
+    - Person(String)
+
+    - name : String
+    - bankAccount : BankAccount
+
+    + getName() : String
+    + getBankAccount() : BankAccount
+}
+
+class Employee{
+    - Employee(Person, double)
+
+    - salary : double
+    - person : Person
+
+    + getSalary() : double
+    + paySalary(double) : void
+}
+
+class Company {
+    - user : User
+    - emps : List<Employee>
+
+    + admitEmployee(String, double) : void
+    + paySalaries(int) : void
+    + employees() : List<Employee>
+}
+
+class SocialSecurity {
+    - user : User
+
+    + register(Employee) : void
+}
+
+class Insurance {
+    - user : User
+
+    + register(Employee) : void
+}
+
+class EmployeeCard {
+    - EmployeeCard(Employee)
+
+    + getEmployee(Employee) : void
+}
+
+class Parking {
+    - user : User
+
+    + allow(Employee) : void
+}
+
+
+BankAccount <|.. BankAccountImpl : implements
+BankAccount <|.. ProxyBankAccount : implements
+
+ProxyBankAccount --> BankAccountImpl : uses
+Person --> BankAccount : uses
+Company --> Employee : has 0..*
+Company --> Insurance : has 0..*
+Company --> SocialSecurity : has 0..*
+Company --> Parking : has 0..*
+
+Employee "1" o-- "1" Person
+Employee "1" o-- "1" EmployeeCard
+
+
+SharkCompany ..> Company : creates
+SharkCompany ..> Person : creates
+
+@enduml

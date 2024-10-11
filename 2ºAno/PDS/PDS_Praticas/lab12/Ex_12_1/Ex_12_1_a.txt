@@ -1,0 +1,5 @@
+Para resolver este problema podemos aplicar dois tipos de padrões:
+1. **Strategy**, que nos vai permitir definir uma família de algoritmos, encapsulá-los e torná-los intercambiáveis, ou seja, tornar possivel fazer a troca entre estes.
+    Permite ainda que o algoritmo de ordenação de telemóveis pretendudo seja selecionado em tempo de execução.
+
+2. **Template Method**, padrão esse que pode ser usado para definir a estrutura de um algoritmo de ordenação e permitir que as subclasses implementem os passos específicos.

@@ -1,0 +1,58 @@
+@startuml diagram_8_3
+
+class Produto {
+    - name : String
+    - weight : double
+    - Produto(String, double)
+
+    + getName() : String
+    + getWeight() : double
+    + draw() : void
+}
+
+class Bebida {
+    - Bebida(String, double)
+
+    + draw() : void
+}
+
+class Conserva {
+    - Conserva(String, double)
+
+    + draw() : void
+}
+
+class Doce {
+    - Doce(String, double)
+
+    + draw() : void
+}
+
+class Caixa {
+    - produtos : ArrayList<Produto>
+    - Caixa(String, double)
+
+    + draw() : void
+    + calculateTotalWeight : double
+    + add : void
+}
+
+class Cabazes {
+    - Cabazes()
+
+    + main(String[] args) : void
+}
+
+
+Bebida --^ Produto : extends
+Conserva --^ Produto : extends
+Doce --^ Produto : extends
+Caixa --^ Produto : extends
+
+Cabazes ..> Bebida : creates
+Cabazes ..> Conserva : creates
+Cabazes ..> Doce : creates
+Cabazes ..> Caixa : creates
+
+
+@enduml

@@ -1,0 +1,3 @@
+Após analisar o ficheiro Calendar.java, conseguimos observar que o padrão de contrução é Factory Method pois esta é uma
+classe abstrata que que possui um método estático chamado createCalendar() pode retornar 3 tipos diferentes de
+ calendario BuddhistCalendar, JapaneseImperialCalendar, GregorianCalendar que se são extenções do Calendar.

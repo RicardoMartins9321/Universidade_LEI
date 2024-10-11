@@ -1,0 +1,33 @@
+@startuml diagram_11_2
+
+class Ex_11_2 {
+    +main(String[]) : void
+}
+
+abstract class Employee {
+    protected - name : String
+    {abstract} +work() : void
+}
+
+class EmployeeFactory {
+    +getEmployee(String) : Employee
+}
+
+class NullEmployee {
+    +work() : void
+    +NullEmployee()
+}
+
+class Programmer {
+    +work() : void
+    +Programmer()
+}
+
+Ex_11_2 ..> EmployeeFactory : uses
+
+EmployeeFactory ..> Employee : creates
+
+Employee <|-- NullEmployee : extends
+Employee <|-- Programmer : extends
+
+@enduml

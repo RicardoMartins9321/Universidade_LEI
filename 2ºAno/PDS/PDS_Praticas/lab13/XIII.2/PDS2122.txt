@@ -1,0 +1,43 @@
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\PDS\practical-gp311\lab13\XIII.2
+2024/06/03 10:03:03
+
+Alínea a) ----------------------------------
+
+Ref: C11 - CargoShip [code=S732, name=SoPingas, cargo=20.2]
+Ref: P35 - PassengerShip [code=S185, name=PDS All aboard, maxPassengers=80]
+Ref: C02 - CargoShip [code=S101, name=Quebra Molas, cargo=155.5]
+Ref: C01 - Container Ship with 3 ships. Total passengers capacity: 14
+PassengerShip [code=B899, name=Bora, maxPassengers=4]
+PassengerShip [code=B878, name=Riacho, maxPassengers=2]
+PassengerShip [code=B785, name=Turista, maxPassengers=8]
+
+Ref: C03 - CargoShip [code=S923, name=Madalena, cargo=18.8]
+Ref: P06 - PassengerShip [code=S078, name=Costeiro, maxPassengers=25]
+Ref: P54 - PassengerShip [code=S199, name=Bananeiros, maxPassengers=120]
+
+
+Alínea b) ----------------------------------
+
+Quebra Molas removed
+Ref: C01 - Container Ship with 3 ships. Total passengers capacity: 14
+PassengerShip [code=B899, name=Bora, maxPassengers=4]
+PassengerShip [code=B878, name=Riacho, maxPassengers=2]
+PassengerShip [code=B785, name=Turista, maxPassengers=8]
+
+Ref: C11 - CargoShip [code=S732, name=SoPingas, cargo=20.2]
+Ref: P35 - PassengerShip [code=S185, name=PDS All aboard, maxPassengers=80]
+Ref: C01 - Container Ship with 3 ships. Total passengers capacity: 14
+PassengerShip [code=B899, name=Bora, maxPassengers=4]
+PassengerShip [code=B878, name=Riacho, maxPassengers=2]
+PassengerShip [code=B785, name=Turista, maxPassengers=8]
+
+Ref: C03 - CargoShip [code=S923, name=Madalena, cargo=18.8]
+Ref: P06 - PassengerShip [code=S078, name=Costeiro, maxPassengers=25]
+Ref: P54 - PassengerShip [code=S199, name=Bananeiros, maxPassengers=120]
+
+
+Alínea c) ----------------------------------
+
+Ref: C02 - CargoShip [code=S101, name=Quebra Molas, cargo=5.5]
+Ref: P54 - PassengerShip [code=S199, name=Bananeiros, maxPassengers=5]
+

@@ -1,0 +1,22 @@
+Lab 12.2: Padrão Template Method nas Classes da API Java
+
+1. Classe: java.io.InputStream
+   Métodos:
+     - read()
+       O método `read()` define o template para a leitura de bytes a partir de uma fonte de entrada.
+       Este chama o método abstrato `read(byte[] b, int off, int len)`, que deve ser implementado pelas subclasses para fornecer o mecanismo real de leitura.
+
+2. Classe: java.io.OutputStream
+   Métodos:
+     - write(byte[] b, int off, int len)
+       O método `write(byte[] b, int off, int len)` define o template para a escrita de bytes numa saída.
+       Este chama o método abstrato `write(int b)`, que tal como o anterior deve ser implementado pelas subclasses para fornecer o mecanismo real de escrita.
+
+3. Classe: java.util.AbstractList
+   Métodos:
+     - add(E e)
+       O método `add(E e)` define o template para adicionar um elemento à lista.
+       Este chama o método abstrato `add(int index, E element)`, que deve também ser implementado pelas subclasses para fornecer o mecanismo real para adicionar um elemento.
+
+Em conclusão, o padrão Template Method é evidente na API Java, particularmente nas classes abstratas que definem a estrutura de um algoritmo numa operação,
+delegando alguns passos para as subclasses. Este padrão ajuda a fornecer uma estrutura consistente, permitindo flexibilidade em implementações específicas.

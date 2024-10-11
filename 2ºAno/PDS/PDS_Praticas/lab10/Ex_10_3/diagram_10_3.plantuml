@@ -1,0 +1,46 @@
+@startuml diagram_10_3
+
+class Ex_10_3 {
+    - myList : List<String>
+    - history : CommandHistory
+
+    + main(String[]) : void
+}
+
+interface Command {
+    + execute() : void
+    + undo() : void
+}
+
+class RemoveCommand<E> {
+    - collection : Collection<E>
+    - element : E
+
+    + execute() : void
+    + undo() : void
+}
+
+class AddCommand<E> {
+    - collection : Collection<E>
+    - element : E
+
+    + execute() : void
+    + undo() : void
+}
+
+class CommandHistory {
+    - history : Stack<Command>
+
+    + executeCommand(Command) : void
+    + undoLastCommand() : void
+    + clearHistory() : void
+}
+
+Ex_10_3 ..> CommandHistory : creates
+Ex_10_3 ..> RemoveCommand : creates
+Ex_10_3 ..> AddCommand : creates
+
+RemoveCommand ..|> Command : implements
+AddCommand ..|> Command : implements
+
+@enduml

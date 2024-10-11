@@ -1,0 +1,81 @@
+@startuml image.png
+
+class Document {
+    - String[] content
+
+    + Document(String content)
+    + String getContent()
+}
+
+class PrintJob {
+    - Document document
+    - int jobId
+
+    + PrintJob(Document document, int jobId)
+    + String call()
+}
+
+class BasicPrinter {
+    - inkAmount
+    - paperAmount
+
+    + print(String[] content)
+    + hasInk()
+    + hasPaper()
+    + addInk()
+    + addPaper()
+    + refill()
+}
+
+interface AdvancedPrinterInterface {
+    +void print(Document doc)
+    +List<Integer> print(List<Document> docs)
+    +void showQueuedJobs()
+    +boolean cancelJob(int jobId) 
+    +void cancelAll()
+}
+
+class AdvancedPrinter {
+    - LinkedBlockingQueue<PrintJob> printQueue
+    - ExecutorService pool
+    - AtomicInteger jobIdCounter
+    - ConcurrentHashMap<Integer, Future<String>> jobsMap
+    - PrinterService spool
+
+    + print(Document doc)
+    + List<Integer> print(List<Document> docs)
+    + void showQueuedJobs()
+    + boolean cancelJob(int jobId)
+    + void cancelAll()
+    + void run()
+    + Future<String> newPrintJob(Document doc, int jobId)
+    + void shutdownAndAwaitTermination()
+    + LinkedBlockingQueue<PrintJob> getPrintQueue()
+}
+
+class BasicPrinterAdapter {
+    - BasicPrinter basicPrinter
+
+    + BasicPrinterAdapter(BasicPrinter basicPrinter)
+    + print(Document doc)
+    + List<Integer> print(List<Document> docs)
+    + void showQueuedJobs()
+    + boolean cancelJob(int jobId)
+    + void cancelAll()
+}
+
+class PrinterTest {
+    + main(String[] args)
+}
+
+
+AdvancedPrinter --^ AdvancedPrinterInterface : implements
+BasicPrinterAdapter --^ AdvancedPrinterInterface : implements
+
+AdvancedPrinter ..> Document : uses
+BasicPrinterAdapter ..> Document : uses
+AdvancedPrinter ..> PrintJob : uses
+
+BasicPrinter --* BasicPrinterAdapter : uses
+
+@enduml

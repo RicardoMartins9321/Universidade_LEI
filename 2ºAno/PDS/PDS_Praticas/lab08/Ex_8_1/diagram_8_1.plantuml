@@ -1,0 +1,78 @@
+@startuml diagram_8_1
+
+class Ex_8_1 {
+    - Ex8_1()
+
+    + main(String[] args) : void
+}
+
+interface EmployeeInterface {
+    + getName() : String
+    + start(Date) : void
+    + terminate(Date) : void
+    + work() : void
+}
+
+class Employee {
+    - name : String
+    - startDate : Date
+    - endDate : endDate
+    - Employee(String)
+
+    + getName() : String
+    + start(Date) : void
+    + terminate(Date) : void
+    + work() : void
+}
+
+class Decorator {
+    - Decorator(EmployeeInterface)
+
+    + getName() : String
+    + start(Date) : void
+    + terminate(Date) : void
+    + work() : void
+}
+
+class TeamMember {
+    - TeamMember(EmployeeInterface)
+
+    + getName() : String
+    + start(Date) : void
+    + terminate(Date) : void
+    + colaborate() : void
+}
+
+class TeamLeader {
+    - TeamLeader(EmployeeInterface)
+
+    + getName() : String
+    + start(Date) : void
+    + terminate(Date) : void
+    + plan() : void
+}
+
+class Manager {
+    - Manager(EmployeeInterface)
+
+    + getName() : String
+    + start(Date) : void
+    + terminate(Date) : void
+    + manage() : void
+}
+
+
+EmployeeInterface <|-- Employee : implements
+EmployeeInterface <|-- Decorator : implements
+
+TeamMember --^ Decorator : extends
+TeamLeader --^ Decorator : extends
+Manager --^ Decorator : extends
+
+Ex_8_1 ..> Employee : creates
+Ex_8_1 ..> TeamMember : creates
+Ex_8_1 ..> TeamLeader : creates
+Ex_8_1 ..> Manager : creates
+
+
+@enduml

@@ -1,0 +1,69 @@
+@startuml diagram_10_1
+
+class Ex_10_1 {
+    + addElementsToVector(VectorGeneric<Integer>) : void
+    + main(String[]) : void
+}
+
+class VectorGeneric<T>{
+    - VectorGeneric()
+
+    - ALLOC : int
+    - dimVec : int
+    - nElem : int
+    - vec : T[]
+
+    + addElem(T) : boolean
+    + ensureSpace() : void
+    + getElem(int) : T
+    + totalElem() : int
+    + removeElem(T) : boolean
+    + listIterator() : ListIterator<T>
+    + listIterator(int) : ListIterator<T>
+    + Iterator() : Iterator<T>
+}
+
+interface Vector<T> {
+    + listIterator() : ListIterator<T>
+    + listIterator(int) : ListIterator<T>
+    + Iterator() : Iterator<T>
+}
+
+class VectorIterator<T>{
+    - VectorIterator(VectorGeneric<T>)
+
+    - index : int
+    - vector : VectorGeneric<T>
+
+    + hasNext() : boolean
+    + next() : T
+}
+
+class Vector_ListIterator<T> {
+    - Vector_ListIterator(VectorGeneric<T>, int)
+
+    - index : int
+    - vector : VectorGeneric<T>
+
+    + hasNext() : boolean
+    + next() : T
+    + hasPrevious() : boolean
+    + previous() : T
+    + nextIndex() : int
+    + previousIndex() : int
+    + remove() : void
+    + set(T) : void
+    + add(T) : void
+}
+
+Ex_10_1 ..> VectorGeneric : creates
+VectorGeneric ..> VectorIterator : creates
+VectorGeneric ..> Vector_ListIterator : creates
+
+VectorGeneric ..|> Vector : implements
+
+VectorIterator --> VectorGeneric : uses
+Vector_ListIterator --> VectorGeneric : uses
+
+
+@enduml

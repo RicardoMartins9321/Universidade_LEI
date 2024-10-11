@@ -1,0 +1,74 @@
+@startuml diagram_8_2
+
+class Ex_8_2 {
+    - Ex_8_2()
+
+    + main(String[] args) : void
+}
+
+interface ReaderInterface {
+    + hasNext() : boolean
+    + next() : String
+}
+
+class TextReader {
+    - scanner : Scanner
+
+    + TextReader(File)
+    + hasNext() : boolean
+    + next() : String
+}
+
+class Decorator {
+    - Decorator(ReaderInterface)
+
+    + hasNext() : boolean
+    + next() : String
+}
+
+class CapitalizationFilter {
+    - CapitalizationFilter(ReaderInterface)
+
+    + hasNext() : boolean
+    + next() : String
+}
+
+class VowelFilter {
+    - CapitalizationFilter(ReaderInterface)
+
+    + hasNext() : boolean
+    + next() : String
+}
+
+class NormalizationFilter {
+    - NormalizationFilter(ReaderInterface)
+
+    + hasNext() : boolean
+    + next() : String
+}
+
+class TermFilter {
+    - words : List<String>
+    - index : int
+    - TermFilter(ReaderInterface)
+
+    + hasNext() : boolean
+    + next() : String
+}
+
+
+ReaderInterface <|-- TextReader : implements
+ReaderInterface <|-- Decorator : implements
+
+VowelFilter --^ Decorator : extends
+CapitalizationFilter --^ Decorator : extends
+NormalizationFilter --^ Decorator : extends
+TermFilter --^ Decorator : extends
+
+Ex_8_2 ..> TermFilter : creates
+Ex_8_2 ..> VowelFilter : creates
+Ex_8_2 ..> CapitalizationFilter : creates
+Ex_8_2 ..> NormalizationFilter : creates
+
+
+@enduml

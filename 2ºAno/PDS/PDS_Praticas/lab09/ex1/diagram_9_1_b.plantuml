@@ -1,0 +1,83 @@
+@startuml diagram_9_1_b
+
+class SharkCompany2 {
+    + main(String[] args)
+}
+
+enum User {
+    OWNER, COMPANY
+}
+
+interface BankAccount {
+    + deposit(double) : void
+    + withdraw(double) : boolean
+    + balance() : double
+}
+
+class BankAccountImpl {
+    - BankAccountImpl(String, double)
+
+    - bank : String
+    - balance : double
+
+    + getBank() : String
+    + deposit(double amount)
+    + withdraw(double amount) : boolean
+    + balance() : double
+}
+
+class ProxyBankAccount {
+    - ProxyBankAccount(String, double)
+
+    - realBank : BankAccountImpl
+
+    + checkAccess() : boolean
+    + deposit(double) : void
+    + withdraw(double) : boolean
+    + balance() : double
+}
+
+class Person {
+    - Person(String)
+
+    - name : String
+    - bankAccount : BankAccount
+
+    + getName() : String
+    + getBankAccount() : BankAccount
+}
+
+class Employee2{
+    - Employee2(Person, double)
+
+    - salary : double
+    - person : Person
+
+    + getSalary() : double
+    + paySalary(double) : void
+}
+
+class Company2 {
+    - user : User
+    - emps : List<Employee2>
+
+    + admitEmployee(String, double) : void
+    + paySalaries(int) : void
+    + employees() : List<Employee2>
+}
+
+
+BankAccount <|.. BankAccountImpl : implements
+BankAccount <|.. ProxyBankAccount : implements
+
+ProxyBankAccount --> BankAccountImpl : uses
+Person --> BankAccount : uses
+Company2 --> Employee2 : uses 0..*
+
+Employee2 "1" o-- "1" Person
+
+
+SharkCompany2 ..> Company2 : creates
+SharkCompany2 ..> Person : creates
+
+@enduml

@@ -1,0 +1,58 @@
+@startuml diagram_9_3
+
+class Demo {
+    - Demo()
+    - CANVAS_SIZE: int
+    - STARS_TO_DRAW: int
+
+    + createStar(char): char
+    + random(int, int) : int
+    + main(String[] args) : void
+}
+
+class Sky {
+    - stars: List<Star>
+
+    + placeStar(Star) : void
+    + paint(Graphics) : void
+}
+
+class Star {
+    - Star(int, int, StarType)
+
+    - x : int
+    - y : int
+    - starType: StarType
+
+    + draw(Graphics) : void
+}
+
+class StarType {
+    - StarType(int, Color, int, int)
+
+    - size: int
+    - color: Color
+    - description: String
+    - physicalProperties: Float[]
+    - x: int
+    - y: int
+
+    + getColor() : Color
+    + getSize : int
+    + draw(Graphics) : void
+}
+
+class StarsHashMap {
+    - TeamLeader(EmployeeInterface)
+
+    - starTypes : HashMap<Character, StarType>
+
+    + getStartType(char, int, int) : StarType
+}
+
+
+Demo ..> Sky : creates
+Demo ..> Star : creates
+
+
+@enduml
