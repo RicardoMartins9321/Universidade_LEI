@@ -1,0 +1,3 @@
+As tabelas estão criadas, só tens de dar refresh
+
+A primeira tabela que apagas é a ultima que criaste, porque é como uma pilha onde foste construido em cima e depois precisas de ir retirando.

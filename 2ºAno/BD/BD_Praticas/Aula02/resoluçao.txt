@@ -1,0 +1,5 @@
+Uma vez que o items não tem uma primary key dele mesmo, temos duas opcões:
+
+Opção a) Ou Colocamos o items como entidade fraca, porque vai buscar a sua key à combinação do CodigoProduto + NumeroEncomenda
+
+Opção b) Criamos um novo campo id que vai passar a ser a primary key.

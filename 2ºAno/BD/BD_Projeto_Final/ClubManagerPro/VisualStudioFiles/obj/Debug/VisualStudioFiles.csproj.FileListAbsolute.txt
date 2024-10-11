@@ -1,0 +1,26 @@
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\FrontEnd Files\ClubManagerPro\VisualStudioFiles\bin\Debug\VisualStudioFiles.exe.config
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\FrontEnd Files\ClubManagerPro\VisualStudioFiles\bin\Debug\VisualStudioFiles.exe
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\FrontEnd Files\ClubManagerPro\VisualStudioFiles\bin\Debug\VisualStudioFiles.pdb
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\FrontEnd Files\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.csproj.AssemblyReference.cache
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\FrontEnd Files\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.csproj.SuggestedBindingRedirects.cache
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\FrontEnd Files\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.Form1.resources
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\FrontEnd Files\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.Properties.Resources.resources
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\FrontEnd Files\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.csproj.GenerateResource.cache
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\FrontEnd Files\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.csproj.CoreCompileInputs.cache
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\FrontEnd Files\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.exe
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\FrontEnd Files\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.pdb
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.csproj.AssemblyReference.cache
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.csproj.SuggestedBindingRedirects.cache
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.Properties.Resources.resources
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.csproj.GenerateResource.cache
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.csproj.CoreCompileInputs.cache
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.exe
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.pdb
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\bin\Debug\VisualStudioFiles.exe.config
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\bin\Debug\VisualStudioFiles.exe
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\bin\Debug\VisualStudioFiles.pdb
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.Perfil.resources
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.Clube.resources
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.LoginPage.resources
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.RegisterPage.resources
+C:\Users\Utilizador\Desktop\Universidade\2º Ano\2º Semestre\BD\Projeto_BD\ClubManagerPro\VisualStudioFiles\obj\Debug\VisualStudioFiles.Home.resources
