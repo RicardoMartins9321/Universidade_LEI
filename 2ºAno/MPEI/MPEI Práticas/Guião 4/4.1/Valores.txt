@@ -1,0 +1,49 @@
+------------------------------------
+TableSize: 500000
+Momento 2: teórico=0.33333   medido=0.33505
+Momento 5: teórico=0.16667   medido=0.16815
+Momento 10: teórico=0.09091   medido=0.09181
+Number of collisions=9233
+Max number of assignements=6
+Simulation time = 0.22203
+------------------------------------
+TableSize: 500000
+Momento 2: teórico=0.33333   medido=0.33373
+Momento 5: teórico=0.16667   medido=0.16701
+Momento 10: teórico=0.09091   medido=0.09098
+Number of collisions=9460
+Max number of assignements=4
+Simulation time = 0.32655
+------------------------------------
+TableSize: 1000000
+Momento 2: teórico=0.33333   medido=0.33463
+Momento 5: teórico=0.16667   medido=0.16782
+Momento 10: teórico=0.09091   medido=0.09184
+Number of collisions=4707
+Max number of assignements=6
+Simulation time = 0.20658
+------------------------------------
+TableSize: 1000000
+Momento 2: teórico=0.33333   medido=0.33336
+Momento 5: teórico=0.16667   medido=0.16654
+Momento 10: teórico=0.09091   medido=0.09088
+Number of collisions=4909
+Max number of assignements=4
+Simulation time = 0.31896
+------------------------------------
+TableSize: 2000000
+Momento 2: teórico=0.33333   medido=0.33499
+Momento 5: teórico=0.16667   medido=0.16833
+Momento 10: teórico=0.09091   medido=0.09221
+Number of collisions=2375
+Max number of assignements=5
+Simulation time = 0.18819
+------------------------------------
+TableSize: 2000000
+Momento 2: teórico=0.33333   medido=0.33398
+Momento 5: teórico=0.16667   medido=0.16722
+Momento 10: teórico=0.09091   medido=0.09131
+Number of collisions=2515
+Max number of assignements=4
+Simulation time = 0.29417
+------------------------------------

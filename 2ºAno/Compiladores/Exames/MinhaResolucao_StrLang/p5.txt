@@ -1,0 +1,3 @@
+t4: "Ricardo"
+print
+print t4, "Motas", ( "kjsahsdabckjfabc fd" / ("a"+"b"+x/t/"") / "-" )

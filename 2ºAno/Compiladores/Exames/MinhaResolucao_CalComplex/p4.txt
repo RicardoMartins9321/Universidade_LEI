@@ -1,0 +1,2 @@
+output conj(2+3i);  ** Esperado: 2-3i
+output conj(5-2i);  ** Esperado: 5+2i

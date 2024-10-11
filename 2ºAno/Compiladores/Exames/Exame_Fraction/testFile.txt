@@ -1,0 +1,5 @@
+antlr4-build
+antlr4-test p1.txt 
+antlr4-test p2.txt 
+antlr4-test p3.txt 
+antlr4-test p4.txt 

@@ -1,0 +1,36 @@
+Problema: Pretende-se implementar uma linguagem para uma calculadora que aceite números complexos. Como exemplo inicial, considere o seguinte programa:
+
+output 2+3i;  # Escreve na consola o número 2+3i
+output 4;  # Escreve na consola o número 4
+output i;  # Escreve na consola o número i
+4 - i => c;  # Guarda o número 4 - i na variável c
+output c;  # Escreve na consola o número armazenado na variável c
+
+Nota 1: Tente tirar o melhor proveito possível das instruções exemplificadas para tornar a linguagem o mais genérica possível. No entanto, pode considerar que os números literais (ex: 1, -i, 2+4i) são sempre compostos por partes reais e imaginárias inteiras.
+Nota 2: As variáveis são compostas por uma letra inicial, seguida por uma sequência de letras ou dígitos.
+Nota 3: Não se esqueça das verificações semânticas. Existem ficheiros `err?.txt` para o ajudar nesse fim.
+
+a) Implemente em ANTLR4 uma gramática `CalComplex` para esta linguagem. (5 valores)
+b) Implemente um interpretador que execute as instruções desta linguagem. (5 valores)
+c) Altere a gramática e o interpretador para permitir a realização das operações aritméticas básicas com números complexos (com a precedência natural): soma (+), subtração (—), multiplicação (*), divisão (:) e parêntesis (ver programa `p2.txt`). (4 valores)
+
+output 1-4+5i+8;
+5-2i => c1;
+output (-3-i):c1;
+4 + i-4*5i -(3i+5:4i) => c2;
+output c2;
+output c1*c2:c2+(i)-4;
+
+
+d) Faça com que o interpretador leia o programa a partir de um ficheiro (cujo nome é passado como argumento do programa) e altere a gramática para permitir a entrada de números complexos pelo utilizador. Esta entrada deve pedir separadamente a parte real e a parte imaginária do número (ver programa `p3.txt`). (2 valores)
+
+output input "n";   ** (input) pede as parte reais e imaginárias de um número complexo 
+                    ** ao utilizador apresentando os textos "n(re): " e "n(im): ",
+                    ** e output escreve o número na consola
+(input "n1") : (input "n2") => div;
+output div;
+
+
+e) Acrescente as seguintes operações:
+(a) Conjugado de números complexos `conj (number)` (ver programa `p4.txt`). (2 valores)
+(b) Módulo de números complexos `|number|` (ver programa `p5.txt`). (2 valores)

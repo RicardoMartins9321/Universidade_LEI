@@ -1,0 +1,14 @@
+xmlMultiline(tag,entry) ::= <<
+\<<tag>\>
+    <if(entry)><entry ;separator="\n"><endif>
+\<<tag>/\>
+>>
+
+xmlUniqueLine(tag,entry) ::= <<
+\<<tag>\> <if(entry)><entry ;separator="\n"><endif> \<<tag>/\>
+>>
+
+StrAdd(str1,str2) ::= <<
+<str1>
+<str2>
+>>

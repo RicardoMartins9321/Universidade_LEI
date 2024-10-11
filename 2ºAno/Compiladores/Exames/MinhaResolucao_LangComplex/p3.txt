@@ -1,0 +1,5 @@
+display real(2+3i); # escreve na consola a parte real de 2+3i
+display imag(2+3i); # escreve na consola a parte imaginária de 2+3i
+display conj(2+3i); # escreve na consola o conjugado de 2+3i
+display |2+3i|; 	# escreve na consola o módulo de 2+3i
+

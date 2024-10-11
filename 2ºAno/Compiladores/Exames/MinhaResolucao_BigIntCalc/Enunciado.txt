@@ -1,0 +1,67 @@
+01.
+
+Para o exame, foram disponibilizados os seguintes ficheiros úteis:
+
+    Faça login no computador com a sua conta. Se necessário, insira a senha.
+    No diretório Desktop, encontrará um conjunto de ficheiros de exemplo da linguagem (p1.txt).
+    Utilize o executável ./run-jar p1.txt como complemento para execução.
+
+Exemplo (num terminal aberto no Desktop):
+
+plaintext
+
+./run-jar p1.txt
+
+Desenvolva a linguagem por forma a que todos os programas sejam aceites (p1.txt para as alíneas a) e b), etc.). Pode consultar a documentação das classes Java usando o comando view-javadoc.
+
+Exemplo:
+
+plaintext
+
+view-javadoc parseTreeProperty
+
+Tem à sua disposição os comandos de apoio à programação em ANTLR4:
+
+    antlr4
+    antlr4-test
+    antlr4-visitor
+    antlr4-main
+    antlr4-build
+    antlr4-run
+    antlr4-clean
+
+Utilize o enunciado como rascunho, e no fim entregue-o com o cabeçalho preenchido. Caso pretenda desistir, deve indicar essa decisão no enunciado e executar o comando:
+
+desist
+
+Problema: Pretende-se implementar um interpretador para cálculo com números inteiros de precisão ilimitada. Nesse sentido, será necessária a utilização da classe BigInteger™ da biblioteca Java (java.math.BigInteger). Como exemplo inicial, considere o seguinte programa:
+
+# p1.txt
+show 100000000000000000000;	# escreve o número na consola
+716257652762576157162 -> c; # guarda um número muito grande na variável c
+show c;						# escreve na consola o número armazenado na variável c
+
+
+Nota 1: Partindo das instruções exemplificadas, tente tornar a linguagem o mais genérica possível:
+
+Nota 2: Os identificadores para variáveis contêm apenas letras minúsculas e dígitos, não podendo começar com um dígito.
+
+Nota 3: A classe BigInteger contém métodos para todas as operações aritméticas requeridas neste interpretador, incluindo um construtor que faz o equivalente ao Integer.parseInt.
+
+Nota 4: Não se esqueça das verificações semânticas. Existem ficheiros err.txt para o ajudar nesse fim.
+
+A) Implemente em ANTLR4, uma gramática BigIntCalc para esta linguagem (exemplificada em p1.txt). [4 valores]
+
+B) Implemente um interpretador que faça a verificação semântica e execute as instruções desta linguagem. [4 valores]
+
+C) Altere a gramática e o interpretador por forma a permitir a realização das seguintes operações sobre números (ver programa p2.txt): [6 valores]
+
+    Soma/subtracção/multiplicação/quociente e resto da divisão de números inteiros (respectivos operadores +, -, *, div, mod), com as precedências aritméticas naturais.
+    Os prefixos unários (+, -): aplicáveis a qualquer expressão. Este operador deve ser prioritário relativamente a todos os anteriores.
+    Parênteses: este operador serve para impor prioridades na realização de operações.
+
+Ver documentação com: view-javadoc BigInteger
+
+d) Acrescente ainda uma instrução condicional em que a condição é falsa se o número for zero e verdadeira em todos os outros casos (ver o programa de p3.txt) [6 valores]
+	A instrução condicional deve poder selecionar um qualquer número de instruções (incluindo zero), e permitir optativamente a existência da seleção de instrucoes quando a condicao é falsa.
+

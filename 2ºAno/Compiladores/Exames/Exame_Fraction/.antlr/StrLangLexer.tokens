@@ -1,0 +1,14 @@
+T__0=1
+T__1=2
+T__2=3
+T__3=4
+ID=5
+STRING=6
+COMMENT=7
+NEWLINE=8
+WS=9
+ERROR=10
+'<='=1
+'input('=2
+')'=3
+'display'=4

@@ -1,0 +1,35 @@
+antlr4-build
+antlr4-visitor <nome da gramática> <nome do executavel criado, ex:Execute>  <tipo de dados desejado, ex: String, Long>
+
+antlr4-main -v <nome do executavel criado, ex:Execute.java> -f - cria a main
+javac da classe main criada
+java da classe criada e introduzir ficheiro, ex: java SuffixCalculatorMain < p1.txt
+
+antl4-build
+antlr4-visitor grammar.g4 Execute String
+antlr4-main -v Execute.java -f
+javac grammarMain.java
+java grammarMain
+
+
+antlr4-listener <nome da gramática> <nome do listener que queres criar>
+
+
+
+transformar header A,B,C conteudo 1,2,3 em 
+<table>
+	<tr>
+		<th>A</th>
+		<th>B</th>
+		<th>C</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+	</tr>
+</table>
+
+
+
+view-javadoc <name>

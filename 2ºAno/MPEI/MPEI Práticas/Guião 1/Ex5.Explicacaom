@@ -1,0 +1,35 @@
+% inicializr um array vazio  de 21 elemntos onde serão guardadas as
+% probabilidades de sair 0 a 20 caras quando se faz 20 lançamentos total
+prob = zeros(1,21);
+p = 0.5;    % probabilidade de sair cara (casos pss:cara ou croua logo 1/2)
+numLancamentos = 20;     % número de lançamentos
+numExperiencias = 10000;  % númuro de experiências aleatórias a realizar, em cada experiência
+            % faz-se o número pretendido de lançamentos, neste caso são
+            % 10000 experiências de 20 lançamentos cada
+
+% for loop para calcular a probabilidade de sair 0 a 20 caras nos 20 lançamentos
+% e de seguida guardá-los em cada iteração no array das probabilidades
+for numCaras = 0:20
+    % +1 porque o indice em Matlab começa em 1 e não 0
+    prob(numCaras+1) = probSimulacao(p,numLancamentos,numCaras,numExperiencias);
+end
+
+stem(0:20,prob);
+xlabel("numCaras")
+ylabel("Probabilidade")
+
+function [prob] = probSimulacao(p,numLancamentos,numCaras,numExperiencias)
+    % rand(rows,cols) = valores entre 0 e 1 logo rand(n,N) < p dá-nos um
+    % array com 20 cols e 10000 rows de valores logicos 0 ou 1, depois a
+    % função sum vai nos dar o valor de soma dos valores de cada coluna o
+    % que equivale ao número de caras obtida nessa experiência. Depois caso
+    % esse número seja igual ao numCaras a que estamos a comparar irá dar o
+    % o número de experências que foram bem sucedidas.
+    % de seguida calcula-se o probabiliade de obter o num de caras especifico 
+    % que vair ser igual ao número de sucessos a dividir pelo n total de
+    % experiências (num casos favoraveis / num casos possiveis)
+    lancamentos = rand(numLancamentos,numExperiencias) < p;
+    sucessos = sum(lancamentos)==numCaras; % == caras
+    prob = sum(sucessos)/numExperiencias;
+
+end

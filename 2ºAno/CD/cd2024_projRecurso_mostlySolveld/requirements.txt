@@ -1,0 +1,5 @@
+Flask
+Celery
+redis
+flower
+python-dotenv

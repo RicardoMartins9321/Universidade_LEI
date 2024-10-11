@@ -1,0 +1,4 @@
+The higher the Paralelism the faster the program runs because it means the threads and processes
+are running alongside each other without intervening and slowing each other down.
+The higher the Concurrency the slower it runs because there are many threads will have to wait
+for the other threads to access the critical zone and continue working

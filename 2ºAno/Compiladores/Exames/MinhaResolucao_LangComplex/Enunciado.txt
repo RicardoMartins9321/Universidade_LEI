@@ -1,0 +1,47 @@
+Problema: Pretende-se implementar um interpretador para cálculo com números complexos. Como exemplo inicial, considere o seguinte programa:
+
+# p1.txt
+display 2+3i; 	# escreve na consola o número 2+3i
+display 4; 		# escreve na consola o número 4
+display i; 		# escreve na consola o número i
+c = 4.3-1i;		# guarda o número 4.3-i na variável c
+display c;		# escreve na consola o número armazenado na variável c
+
+Nota 1: Partindo das instruções exemplificadas, tente tornar a linguagem o mais genérica possível.
+Nota 2: Os identificadores para variáveis contêm apenas letras e dígitos, não podendo começar com um dígito.
+Nota 3: Considere que as partes reais e imaginárias dos números literais são inteiros ou reais de vírgula fixa.
+Nota 4: Não se esqueça das verificações sintáticas e semânticas. Existem ficheiros err.txt para o ajudar nesse fim.
+
+
+a) Implemente em ANTLR4, uma gramática LangComplex para esta linguagem. [4 valores]
+b) Implemente um interpretador que faça a verificação semântica e execute as instruções desta linguagem. [4 valores]
+
+c) Altere a gramática e o interpretador por forma de permitir a realização das seguintes operações sobre complexos, com a precedência natural. (ver o p2.txt) [6 valores]
+	soma (+), subtração (—), multiplicação (*), divisão (:), operadores unários ('+','-') e parêntesis 
+
+# p2.txt
+display i-4+5i+8;
+r1 <= 2;
+i1 <= i;
+display r1*r1*i1;
+display r1+i1:i1-r1;
+display -r1;
+display -i1;
+c1 <= 1-i;
+c2 <= -(c1+r1 - i1*i);
+display c2;
+
+
+d) Acrescente ainda as seguintes operações (ver programa p3.txt):
+	(a) Extração de parte real (real(number)) e parte imaginária (imag(number)) de um número complexo.
+	(b) Conjugado de números complexos (conj(number)).
+	(c) Módulo de números complexos (|number|).
+
+	Considere as seguintes prioridades entre operadores (por ordem decrescente): parênteses, operadores unários prefixos, multiplicação/divisão, soma/subtração.
+
+# p3.txt
+display real(2+3i); # escreve na consola a parte real de 2+3i
+display imag(2+3i); # escreve na consola a parte imaginária de 2+3i
+display conj(2+3i); # escreve na consola o conjugado de 2+3i
+display |2+3i|; 	# escreve na consola o módulo de 2+3i
+

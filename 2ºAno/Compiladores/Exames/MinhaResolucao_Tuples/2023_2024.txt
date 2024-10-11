@@ -1,0 +1,39 @@
+1. Tuplos de Números double
+2. Consideramos que os tuplos não são recursivos logo não podem existir tuplos dentro de tuplos
+3. No interpreter fazer os tuplos como sendo ArrayList de Doubles
+4. print não deve estar dentro da expr, mas definido na sua própria regra
+5. No main passar um ou mais ficheiros para ler em vez de apenas do System.in para depois também conseguires ler input do utilizador através do 'read'
+6. Fazer a linguagem o mais genérica e correta possivel e ao mesmo tempo resiliente contra erros.
+
+Ficheiros de Erro:
+[1]			-- escrever apenas um tuplo só não é uma expressão válida
+-------------------------
+print c 	-- id da variável não definido
+-------------------------------
+x = [3,5,[4,2]];	-- erro: tuplo dentro de tuplo
+----------------------------
+Outro ficheiro que não me estou a lembrar
+
+
+a := [4,2,3,5];	-- atribuição de valor
+print;				-- imprime vazio
+print a,[4,3,2,1,6];	-- imprime na consola
+print a + sum a + avg(a-[1,1,1,1]);
+
+'(' expr ')' - meter os parentesis para podermos indicar que o que encontra dentro deles tem mais prioridade
+
+Operações unárias
+-a	-- operação unária para converter os sinais dos elementos dentro do tuplo para [-4,-2,-3,-5]
+-a	-- fazemos -a outra vez e agora já vai ser digo eu [4,2,3,5]
++[3,2]
+
+Operações binárias
+[2,2,2] + [3,2,1] = [5,4,3]
+[2,2,2] - [3,2,1] = [-1,0,1]
+
+Operação 'sum': para dar a soma dos elementos de um tuplo, ou depois da combinação de valores lá dentro
+Operação 'avg': para dar o average dos elementos de um tuplo, ou depois da combinação de valores lá dentro
+Operação 'head': Nao tenho a certeza, mas acho que será para nos dar ou o primeiro elemento ou a primeira metade dos elementos do conjunto 
+Operação 'tail': Nao tenho a certeza, mas acho que será para nos dar ou o último elemento ou a segunda metade dos elementos do conjunto 
+
+Criar intrução para um while loop.

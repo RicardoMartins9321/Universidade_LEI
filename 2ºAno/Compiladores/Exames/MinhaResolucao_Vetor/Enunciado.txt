@@ -1,0 +1,51 @@
+Problema: Pretende-se implementar um interpretador para calculo vectorial simples. Como
+exemplo inicial, considere o seguinte programa:
+
+# p1.txt
+show [1,2]; # escreve na consola o vector [1.0,2.0]
+[3] => vi; 	# guarda na varidvel v1 o vector [3.0]
+show v1; 	# escreve na consola o valor armazenado na variável v1
+show 3; 	# escreve na consola o escalar 3.0
+5.5 -> e1;	# guarda na varidvel e1 o valor escalar 5.5
+show e1; 	# escreve na consola o valor armazenado em e1
+
+Notas: 
+	Partindo das instruções exemplificadas, tente tornar a linguagem o mais genérica possível:
+    Considere que os vectores não podem ser elementos de outros vectores.
+    Os identificadores para variáveis contêm apenas letras minúsculas e dígitos, não podendo começar com um dígito.
+    Um vector é um array (ou uma lista), não-vazio, de valores reais (ex: array nativo ou ArrayList).
+    Considere que os números escalares literais são números inteiros ou reais de vírgula fixa.
+    Não se esqueça das verificações semânticas. Existem ficheiros err.txt para o ajudar nesse fim.
+
+a) Implemente em ANTLR4, uma gramática Vector para esta linguagem. [4 valores]
+
+b) Implemente um interpretador que faça a verificação semântica e execute as instruções desta linguagem. [4 valores]
+
+c) Altere a gramática e o interpretador por forma de permitir a realização das seguintes operações sobre vectores! [6 valores]
+
+    Soma/subtracção de escalares ou de vectores (operadores + -): tem como resultado um escalar ou (respectivamente) um vector (outra combinação é um erro semântico).
+    Operadores prefixos unários (+ -): aplicáveis a qualquer valor (escalar ou vector) resultando, no caso do operador - nos valores simétricos (sem alteração no outro caso). Este operador deve ser prioritário relativamente aos anteriores.
+    Parênteses: este operador serve para impor prioridades na realização de operações sobre vectores.
+
+# p2.txt
+show [1,2] + (3,4]; 					# escreve na consola o vector [4.0,6.0]
+(1,1) + [2,2] - ([7,8] - [8,7]) -> x; 	# variável x é o vector [4,2]
+show x - ([2,2]); 						# escreve na consola o vector [2.0,0.0]
+show 1 + 2 - 3; 						# escreve na consola o escalar 0
+
+
+d) Adicione as seguintes funcionalidades:
+
+    Multiplicação de escalares por vectores (ou vice-versa) com o operador *: tem como resultado um vector cujos elementos são multiplicados pelo valor escalar (a multiplicação de vectores é um erro semântico).
+    Multiplicação de escalares também com o operador * (com o resultado aritmético esperado).
+    Produto interno de vectores: o operador tem como resultado um escalar que é a soma dos produtos dos valores de cada vector.
+
+O seguinte define as prioridades entre operadores (por ordem decrescente): parênteses, operadores unários prefixos, multiplicação de valores, produto interno e soma/subtracção de valores.
+
+# p3.txt
+2*[1,2] -> x;  # variável x é o vector [2.0,4.0]
+x * (0.5 * 1); # resulta em [1.0, 2.0]
+x + [5,5] * 3; # resulta em [17.0,19.0]
+[1,2] * [2,1]; # escreve na consola o escalar 4.0
+
+
