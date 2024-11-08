@@ -1,0 +1,178 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+body.login-register {
+    background-color: #ffe9e0;
+  }
+
+.form-bg {
+    background-color: #ffe9e0;
+    min-height: 100vh;
+}
+
+/* Ensure container fills available space */
+.container-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem; /* Adjust spacing between header, footer, and container */
+}
+
+/* Form validation feedback */
+.invalid-input {
+    border: 2px solid red;
+}
+.error-message {
+    color: red;
+    font-size: 0.875rem; /* Adjust size based on design */
+    margin-top: 0.25rem;
+}
+
+.form-container {
+    background: linear-gradient(150deg, #1B394D 33%, #2D9DA7 34%, #2D9DA7 66%, #EC5F20 67%);
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    padding: 30px 20px 50px;
+    /*width: 70%; /* Adjust this to limit the width if necessary */
+    max-width: 500px; /* Adjust based on desired width */
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.form-container .title {
+    color: #fff;
+    font-size: 23px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin: 0 0 60px;
+}
+
+.form-container .form-horizontal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.form-container .form-icon {
+    color: #fff;
+    background-color: #1B394D;
+    font-size: 75px;
+    line-height: 92px;
+    height: 90px;
+    width: 90px;
+    margin: -65px auto 10px;
+    border-radius: 50%;
+}
+
+.form-container .form-group {
+    margin: 0 0 10px;
+    position: relative;
+}
+
+.form-container .form-group:nth-child(3) {
+    margin-bottom: 30px;
+}
+
+.form-container .form-group .input-icon {
+    color: #e7e7e7;
+    font-size: 23px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.form-container .form-control {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    height: 50px;
+    padding: 10px 10px 10px 40px;
+    margin: 0 0 5px;
+    border: none;
+    border-bottom: 2px solid #e7e7e7;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.form-container .form-control:focus {
+    box-shadow: none;
+    border-bottom-color: #EC5F20;
+}
+
+.form-container .form-control::placeholder {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-container .forgot {
+    font-size: 13px;
+    font-weight: 600;
+    text-align: right;
+    display: block;
+}
+
+.form-container .forgot a {
+    color: #777;
+    transition: all 0.3s ease 0s;
+}
+
+.form-container .forgot a:hover {
+    color: #777;
+    text-decoration: underline;
+}
+
+.form-container .signin {
+    color: #fff;
+    background-color: #EC5F20;
+    font-size: 17px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    width: 100%;
+    padding: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease 0s;
+}
+
+.form-container .signin:hover,
+.form-container .signin:focus {
+    font-weight: 600;
+    letter-spacing: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+}
+
+.register-link {
+    margin-top: 20px;
+    color: #fff; /* White text for better visibility */
+}
+
+.register-link a {
+    color: #3d3835; /* Orange text for the link */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600; /* Make the font bold */
+    transition: all 0.3s;
+}
+
+.register-link a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.position-relative {
+    position: relative;
+  }
+
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .toggle-password i {
+    font-size: 1.2em;
+    color: #777;
+  }

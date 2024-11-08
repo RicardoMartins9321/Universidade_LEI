@@ -1,0 +1,41 @@
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Ajuste conforme necessário */
+  }
+  
+  .custom-calendar {
+    max-width: 400px; /* Largura máxima do calendário */
+  }
+  
+  .highlighted-day {
+    background-color: #f0f0f0; /* Cor de fundo para os dias destacados */
+    border-radius: 50%; /* Bordas arredondadas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+
+  
+  .custom-tile abbr {
+    /* display: none;*/
+   background-color: #000000; /* Cor de fundo para os dias destacados */
+   color: rgb(255, 0, 0);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+   }
+
+  .custom-content {
+    background-color: #f0f0f0; /* Cor de fundo para os dias destacados */
+    border-radius: 50%; /* Bordas arredondadas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+  }
+  

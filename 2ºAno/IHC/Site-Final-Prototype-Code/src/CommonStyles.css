@@ -1,0 +1,355 @@
+/* Reset body and html styles */
+html, body {
+    height: 100%; /* Define the full height for the page */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #ffe9e0;
+    flex-direction: column; /* Arrange elements in a column */
+  }
+
+  #root, .App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Ensure the root or main container occupies full vertical space */
+  }
+
+  /* Header styles */
+  header {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 0px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+    line-height: 150%;
+    justify-content: center;
+  }
+
+  @media (max-width: 991px) {
+    header {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  .page-title {
+    align-self: center;
+    color: #000;
+    text-align: center;
+    letter-spacing: -1.28px;
+    gap: 0px;
+    font: 700 64px Inter, sans-serif;
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: 991px) {
+    .page-title {
+      max-width: 100%;
+      flex-wrap: wrap;
+      font-size: 40px;
+    }
+  }
+
+  /* Search area */
+  .search-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
+    border-radius: 5px;
+  }
+
+  /* Override Bootstrap CSS for table-striped */
+  .table-striped tbody tr:nth-child(odd) {
+    background-color: #f15a22; /* Set background color for odd rows */
+  }
+
+
+  /* Table styles */
+  .table-custom, .athlete-table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .table-custom th, .table-custom td, .athlete-table th, .athlete-table td {
+    width: 20%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .table-custom th, .athlete-table th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+    /* Add custom styling for the table */
+    .table-custom th {
+        background-color: #f15a22 !important; /* Ensure header color */
+        color: white !important; /* Ensure header text color */
+    }
+
+    .table-custom tbody tr:nth-child(odd) {
+        background-color: #ffe9e0 !important; /* Set odd rows background */
+    }
+
+    .table-custom tbody tr:hover {
+        background-color: #ff895ed1 !important; /* Hover color close to the header */
+    }
+
+
+  /* Links */
+  .link {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .link:hover {
+    text-decoration: underline;
+  }
+
+  /* Sorting styles */
+  .sortable {
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  .sortable:hover {
+    color: blue;
+  }
+
+  /* Pagination */
+  .pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .pagination li {
+    margin: 0 10px;
+  }
+
+  .pagination li a {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #007bff;
+  }
+
+  .pagination li a:hover {
+    background-color: #eee;
+  }
+
+  .active a {
+    background-color: #007bff;
+    color: white;
+  }
+
+  /* Athlete search area */
+  .athlete-search,
+  .club-search {
+    flex: 1; /* Ensures the .athlete-search takes the available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    border-radius: 12px; /* Rounded corners for a smoother look */
+  }
+
+  @media (max-width: 991px) {
+    .athlete-search,
+    .club-search {
+      flex-wrap: wrap;
+    }
+  }
+
+  /* Athlete row styles */
+  .athlete-row {
+    border-color: rgba(185, 185, 185, 1);
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    gap: 0px;
+    font-size: 16px;
+    color: #323232;
+    font-weight: 400;
+  }
+
+  @media (max-width: 991px) {
+    .athlete-row {
+      flex-wrap: wrap;
+    }
+  }
+
+  .athlete-name,
+  .athlete-gender,
+  .athlete-district,
+  .athlete-club {
+    font-family: Inter, sans-serif;
+    border-color: rgba(185, 185, 185, 1);
+    border-style: solid;
+    border-width: 1px;
+    white-space: nowrap;
+    justify-content: center;
+    flex: 1;
+    padding: 16px 20px;
+  }
+
+  @media (max-width: 991px) {
+    .athlete-name,
+    .athlete-gender,
+    .athlete-district,
+    .athlete-club {
+      white-space: initial;
+    }
+  }
+
+  .athlete-birthdate {
+    border-color: rgba(185, 185, 185, 1);
+    border-style: solid;
+    border-width: 1px;
+    align-self: start;
+    color: #74747b;
+    white-space: nowrap;
+    justify-content: center;
+    flex: 1;
+    padding: 16px 20px;
+    font: 700 14px Inter, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .athlete-birthdate {
+      white-space: initial;
+    }
+  }
+
+  .no-results-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    margin: 40px auto; /* Center the card */
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+
+  .no-results-card h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .no-results-card p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .no-results-card .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .no-results-card .btn:hover {
+    background-color: #0056b3;
+  }
+
+  .content-bg {
+    background-color: #ffffff; /* White background */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding around the content */
+    margin-top: 20px; /* Space between navbar and this content */
+  }
+  
+  .main-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px; /* Space before testimonials */
+    text-align: center; /* Center the heading */
+  }
+  
+  /* CommonStyles.css */
+.main-content {
+    padding: 20px;
+
+  }
+
+  .main-heading {
+    margin-top: 20px;
+    font-size: 2rem;
+    
+  }
+  .testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Maintain three columns on medium devices */
+    gap: 16px; /* Reduced gap for closeness */
+    justify-items: center;
+  }
+  
+  .testimonial {
+    flex: 1;
+    gap: 16px;
+    padding: 16px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    height: auto; /* Adjust based on content */
+    width: 100%; /* Make cards wider */
+  }
+  .carousel-item img {
+    object-fit: cover;
+    height: 400px; /* Adjust the height as needed */
+  }
+
+  @media (min-width: 1000px) {
+    .carousel-item img {
+      height: 550px; /* Adjust the height as needed */
+    }
+  }
+
+  .testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+    border-radius: 8px; /* Rounded corners for aesthetic */
+    padding: 10px; /* Padding to avoid text touching the edges */
+    margin-bottom: 20px; /* Extra space at the bottom */
+
+    color: #000;
+  }
+  
